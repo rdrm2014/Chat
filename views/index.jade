@@ -1,0 +1,30 @@
+extends layout
+block content
+    script(src='/socket.io/socket.io.js')
+    script(src='/js/myScript.js')    
+    .row.pad-top.pad-bottom
+        .col-lg-8.col-md-8.col-sm-8
+            .chat-box-div
+                .chat-box-head
+                    | GROUP CHAT HISTORY                              
+                div(class='panel-body chat-box-main1', id='conversation')                    
+                .chat-box-footer
+                    .input-group
+                        input.form-control(type='text', placeholder='Enter Text Here...', id='data')
+                        span.input-group-btn
+                          button.btn.btn-info(type='button', id='datasend') SEND
+                  
+        .col-lg-4.col-md-4.col-sm-4
+            .chat-box-online-div
+                .chat-box-online-head
+                    | ONLINE USERS 
+                    span(id='numUsers') (120)
+                div(class='panel-body chat-box-main2', id='listUsers')
+                    
+              
+            .chat-box-new-div
+                .chat-box-new-head
+                    | NEW CHATS 
+                    span(id='numChats') (4)
+                div(class='panel-body chat-box-main2', id='listChats')
+                    
