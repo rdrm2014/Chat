@@ -5,54 +5,54 @@
 body {
     padding-top: 20px;
     padding-bottom: 20px;
-   font-family:Verdana;
+    font-family:Verdana;
 }
 .pad-top {
     padding-top:30px;
 }
 .pad-bottom {
-     padding-bottom:30px;
+    padding-bottom:30px;
 }
 
 .header,
 .footer {
-  padding-right: 15px;
-  padding-left: 15px;
+    padding-right: 15px;
+    padding-left: 15px;
 }
 
 .header {
-  padding-bottom: 20px;
-  border-bottom: 1px solid #e5e5e5;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #e5e5e5;
 }
 
 .header h3 {
-  margin-top: 0;
-  margin-bottom: 0;
-  line-height: 40px;
+    margin-top: 0;
+    margin-bottom: 0;
+    line-height: 40px;
 }
 
 .footer {
-  padding-top: 19px;
-  color: #777;
-  border-top: 1px solid #e5e5e5;
+    padding-top: 19px;
+    color: #777;
+    border-top: 1px solid #e5e5e5;
 }
 
 @media (min-width: 800px) {
-  .container {
-    max-width: 800px;
-  }
+    .container {
+        max-width: 800px;
+    }
 }
 
 @media screen and (min-width: 800px) {
-  .header,
-  .footer {
-    padding-right: 0;
-    padding-left: 0;
-  }
+    .header,
+    .footer {
+        padding-right: 0;
+        padding-left: 0;
+    }
 
     .header {
-    margin-bottom: 30px;
-  }
+        margin-bottom: 30px;
+    }
 }
 
 /*======================================
@@ -78,11 +78,11 @@ body {
 } 
 .chat-box-head {
     padding: 10px 15px;
-border-bottom: 2px solid #354ea0;
-background-color: #354ea0;
-color: #fff;
-text-align: center;
-border-radius: 12px 12px 0px 0px;
+    border-bottom: 2px solid #354ea0;
+    background-color: #354ea0;
+    color: #fff;
+    text-align: center;
+    border-radius: 12px 12px 0px 0px;
 }
 
 .chat-box-left {
@@ -115,8 +115,22 @@ border-radius: 12px 12px 0px 0px;
     color:#049e64;
     line-height:40px;
 }
+
+.chat-box-name-elem1{
+    width:40px;
+    height:40px;
+    border-radius:40px;
+    color:#fff;
+    text-align:center;
+    display:inline-block;
+}
+
+.chat-box-name-elem2{
+    display:inline-block;
+    padding: 0px 5px;
+}
    
-    .chat-box-right {
+.chat-box-right {
     width: 100%;
     height: auto;
     padding: 15px;
@@ -149,7 +163,7 @@ border-radius: 12px 12px 0px 0px;
 
 .chat-box-footer {
     background-color: #D8D8D8;
-padding: 10px;
+    padding: 10px;
     border-radius: 0px 0px 12px 12px;
 }
 /*======================================
@@ -169,10 +183,10 @@ padding: 10px;
 
 .chat-box-online-head {
     padding: 10px 15px;
-border-bottom: 2px solid #049e64;
-background-color: #049e64;
-color: #fff;
-text-align: center;
+    border-bottom: 2px solid #049e64;
+    background-color: #049e64;
+    color: #fff;
+    text-align: center;
     border-radius: 12px 12px 0px 0px;
 }
 
@@ -190,7 +204,23 @@ text-align: center;
     color:#ff6a00;
     line-height:40px;
 }
-    /*======================================
+
+.chat-box-name-elem1{
+    width:40px;
+    height:40px;
+    border-radius:40px;
+    color:#fff;
+    background:#ff6a00;
+    text-align:center;
+    display:inline-block;
+}
+
+.chat-box-name-elem2{
+    display:inline-block;
+    padding: 0px 5px;
+    color:#049e64"
+}
+/*======================================
   NEW  CHAT  STYLES
 ======================================= */
     
@@ -202,9 +232,9 @@ text-align: center;
 
 .chat-box-new-head {
     padding: 10px 15px;
-border-bottom: 2px solid #ff6a00;
-background-color: #ff6a00;
-color: #fff;
-text-align: center;
+    border-bottom: 2px solid #ff6a00;
+    background-color: #ff6a00;
+    color: #fff;
+    text-align: center;
     border-radius: 12px 12px 0px 0px;
 }

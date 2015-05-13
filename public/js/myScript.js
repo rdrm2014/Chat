@@ -10,11 +10,8 @@ socket.on('connect', function () {
 });
 
 socket.on('updatechat', function (color, username, data) {
-    if(username == current_user){
-        $('#conversation').append('<div class="chat-box-left">' + data + '</div><div class="chat-box-name-left"><div style="width:40px;height:40px;border-radius:40px;color:#fff;text-align:center;background:'+color+';display:inline-block;"> ' + username[0]+username[username.length-1] + '</div><div style="display:inline-block;padding: 0px 5px;color:'+color+'">- ' + username + '</div></div><hr class="hr-clas">'); 
-    } else{
-        $('#conversation').append('<div class="chat-box-right">' + data + '</div><div class="chat-box-name-right"><div style="width:40px;height:40px;border-radius:40px;color:#fff;text-align:center;background:'+color+';display:inline-block;"> ' + username[0]+username[username.length-1] + '</div><div style="display:inline-block;padding: 0px 5px;color:'+color+'">- ' + username + '</div></div><hr class="hr-clas">'); 
-    }
+    var isCurrentUser = (username == current_user) ? "left": "right";
+    $('#conversation').append('<div class="chat-box-' + isCurrentUser + '">' + data + '</div><div class="chat-box-name-' + isCurrentUser + '"><div class="chat-box-name-elem1" style="background:'+color+';"> ' + username[0]+username[username.length-1] + '</div><div class="chat-box-name-elem2" style="color:'+color+'"> - ' + username + '</div></div><hr class="hr-clas">'); 
     $('#data').focus();
     $("#conversation").scrollTop($("#conversation")[0].scrollHeight);
     
@@ -26,10 +23,10 @@ socket.on('updaterooms', function (rooms, current_room) {
     $('#listChats').empty();    
     $.each(rooms, function (key, value) {
         if (value == current_room) {
-                $('#listChats').append('<a class="chat-box-online-left" href="#"><div style="width:40px;height:40px;border-radius:40px;color:#fff;text-align:center;background:#049e64;display:inline-block;"> <img class="img-circle" src="/images/room.png"></div><div style="display:inline-block;padding: 0px 5px;color:#049e64">- (' + value + ')</div>');            
+                $('#listChats').append('<a class="chat-box-online-left"><div class="chat-box-name-elem1" style="background:#049e64;"> <img class="img-circle" src="/images/room.png"></div><div class="chat-box-name-elem2" style="color:#049e64">- (' + value + ')</div>');            
         }
         else {
-            $('#listChats').append('<a class="chat-box-online-left" href="#" onclick="switchRoom(\'' + value + '\')"><div style="width:40px;height:40px;border-radius:40px;color:#fff;text-align:center;background:#ff6a00;display:inline-block;"> <img class="img-circle" src="/images/room.png"></div><div style="display:inline-block;padding: 0px 5px;">- (' + value + ')</div></a>');            
+            $('#listChats').append('<a class="chat-box-online-left" onclick="switchRoom(\'' + value + '\')"><div class="chat-box-name-elem1"> <img class="img-circle" src="/images/room.png"></div><div class="chat-box-name-elem2">- (' + value + ')</div></a>');            
         }
         $('#listChats').append('<hr class="hr-clas-low">');
     });
@@ -40,7 +37,7 @@ socket.on('updateNumOnline', function (numOnline, users) {
     $('#numUsers').append("(" + numOnline + ")");
     $('#listUsers').empty();    
     $.each(users, function (key, value) { 
-        $('#listUsers').append('<div class="chat-box-online-users-left"><div style="width:40px;height:40px;border-radius:40px;color:#fff;text-align:center;background:' + value + ';display:inline-block;"> ' + key[0]+key[key.length-1] + '</div><div style="display:inline-block;padding: 0px 5px;color:' + value + '">- ' + key + '</div></div><hr class="hr-clas-low">');
+        $('#listUsers').append('<div class="chat-box-online-users-left"><div class="chat-box-name-elem1" style="background:' + value + ';"> ' + key[0]+key[key.length-1] + '</div><div class="chat-box-name-elem2" style="color:' + value + '">- ' + key + '</div></div><hr class="hr-clas-low">');
     });
 });
 
