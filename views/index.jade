@@ -6,11 +6,11 @@ block content
         .col-lg-8.col-md-8.col-sm-8
             .chat-box-div
                 .chat-box-head
-                    | GROUP CHAT HISTORY                              
+                    | CHAT HISTORY                              
                 div(class='panel-body chat-box-main1', id='conversation')                    
                 .chat-box-footer
                     .input-group
-                        input.form-control(type='text', placeholder='Enter Text Here...', id='data')
+                        input.form-control(type='text', placeholder='Enter Text Here...', id='data', autofocus)
                         span.input-group-btn
                           button.btn.btn-info(type='button', id='datasend') SEND
                   
@@ -24,7 +24,7 @@ block content
               
             .chat-box-new-div
                 .chat-box-new-head
-                    | NEW CHATS 
+                    | ROOMS 
                     span(id='numChats') (4)
                 div(class='panel-body chat-box-main2', id='listChats')
                     

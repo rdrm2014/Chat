@@ -15,6 +15,8 @@ socket.on('updatechat', function (color, username, data) {
     } else{
         $('#conversation').append('<div class="chat-box-right">' + data + '</div><div class="chat-box-name-right"><div style="width:40px;height:40px;border-radius:40px;color:#fff;text-align:center;background:'+color+';display:inline-block;"> ' + username[0]+username[username.length-1] + '</div><div style="display:inline-block;padding: 0px 5px;color:'+color+'">- ' + username + '</div></div><hr class="hr-clas">'); 
     }
+    $('#data').focus();
+    $("#conversation").scrollTop($("#conversation")[0].scrollHeight);
     
 });
 
@@ -24,7 +26,7 @@ socket.on('updaterooms', function (rooms, current_room) {
     $('#listChats').empty();    
     $.each(rooms, function (key, value) {
         if (value == current_room) {
-                $('#listChats').append('<a class="chat-box-online-left" href="#"><div style="width:40px;height:40px;border-radius:40px;color:#fff;text-align:center;background:#ff6a00;display:inline-block;"> <img class="img-circle" src="/images/room.png"></div><div style="display:inline-block;padding: 0px 5px;">- (' + value + ')</div>');            
+                $('#listChats').append('<a class="chat-box-online-left" href="#"><div style="width:40px;height:40px;border-radius:40px;color:#fff;text-align:center;background:#049e64;display:inline-block;"> <img class="img-circle" src="/images/room.png"></div><div style="display:inline-block;padding: 0px 5px;color:#049e64">- (' + value + ')</div>');            
         }
         else {
             $('#listChats').append('<a class="chat-box-online-left" href="#" onclick="switchRoom(\'' + value + '\')"><div style="width:40px;height:40px;border-radius:40px;color:#fff;text-align:center;background:#ff6a00;display:inline-block;"> <img class="img-circle" src="/images/room.png"></div><div style="display:inline-block;padding: 0px 5px;">- (' + value + ')</div></a>');            
