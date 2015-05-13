@@ -74,6 +74,7 @@ body {
 .chat-box-div {
     border:2px solid #354ea0;
     border-bottom:2px solid #354ea0;
+    border-radius: 15px;
 } 
 .chat-box-head {
     padding: 10px 15px;
@@ -81,7 +82,7 @@ border-bottom: 2px solid #354ea0;
 background-color: #354ea0;
 color: #fff;
 text-align: center;
-
+border-radius: 12px 12px 0px 0px;
 }
 
 .chat-box-left {
@@ -149,6 +150,7 @@ text-align: center;
 .chat-box-footer {
     background-color: #D8D8D8;
 padding: 10px;
+    border-radius: 0px 0px 12px 12px;
 }
 /*======================================
     CHAT BOX ONLINE STYLES
@@ -162,6 +164,7 @@ padding: 10px;
 .chat-box-online-div {
     border:2px solid #049e64;
     border-bottom:2px solid #049e64;
+    border-radius: 15px;
 } 
 
 .chat-box-online-head {
@@ -170,7 +173,7 @@ border-bottom: 2px solid #049e64;
 background-color: #049e64;
 color: #fff;
 text-align: center;
-
+    border-radius: 12px 12px 0px 0px;
 }
 
 .chat-box-online-users-left {
@@ -194,6 +197,7 @@ text-align: center;
 .chat-box-new-div {
     border:2px solid #ff6a00;
     border-bottom:2px solid #ff6a00;
+    border-radius: 15px;
 } 
 
 .chat-box-new-head {
@@ -202,5 +206,5 @@ border-bottom: 2px solid #ff6a00;
 background-color: #ff6a00;
 color: #fff;
 text-align: center;
-
+    border-radius: 12px 12px 0px 0px;
 }
